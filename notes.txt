@@ -4,7 +4,7 @@
     saga        yarn add redux-saga
     axios       yarn add axios
 
-2. git  !
+2. git  !1main
     make table
         forms
             name
