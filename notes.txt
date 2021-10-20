@@ -1,0 +1,38 @@
+1. install
+    yarn     npm install --global yarn
+    redux toolkit (such as Redux Thunk and Reselect)        yarn add @reduxjs/toolkit
+    saga        yarn add redux-saga
+    axios       yarn add axios
+
+2. git 
+    make table
+        forms
+            name
+            enable 
+            code
+
+        fields
+            def_name
+            type
+            code
+
+        form_field
+            field
+            name
+            required
+            min_length
+            max_lentgh
+            
+
+        form_user
+            user_id
+            form_id
+
+
+        response_data 
+            form_id
+            response_data(json)
+            datatime
+
+
+
