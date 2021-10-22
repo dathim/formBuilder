@@ -5,7 +5,7 @@ import formsReducer from './formsReducer'
 import profileReducer  from './profileReducer'
 import responsesReducer from './responsesReducer'
 
-
+ 
 let reducers = combineReducers({
     fields: fieldsReducer,
     forms: formsReducer,
@@ -14,5 +14,5 @@ let reducers = combineReducers({
 })
 
 let store = createStore(reducers,applyMiddleware(thunkMiddelWare))
-
+console.log('123')
 export default store

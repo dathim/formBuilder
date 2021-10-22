@@ -3,25 +3,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "antd/dist/antd.css";  
-import SiderDemo from "./components/Example"
- 
 
-
-
+import { Provider } from 'react-redux'
+import store from "./redux" 
+import { BrowserRouter } from 'react-router-dom';
+import Router from './components/router'
+import { Layout } from 'antd';
+import SiderMenu from './components/sliderMenu'
 
 export default function Example() {
     return (  
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <SiderDemo />
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+       
+        <Provider store={store}>
+            <BrowserRouter>
+                <Layout style={{ minHeight: '100vh' }}>
+                    <SiderMenu/>
+                    <Router/>
+                </Layout>
+            </BrowserRouter>
+        </Provider>
+                   
     );
 }
 
-ReactDOM.render(<Example />, document.getElementById('app'));
+ReactDOM.render(<Example />, document.getElementById('app'));  

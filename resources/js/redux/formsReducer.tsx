@@ -8,7 +8,7 @@ export type formsStore = {
     userMiddleName: string | undefined,
     myMessages: any, 
     catigories: Catigories | undefined,*/
- }
+}
 
 let initialState: formsStore = {
     appIsEnable: true
