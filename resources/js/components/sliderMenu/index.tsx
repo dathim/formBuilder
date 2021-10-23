@@ -30,7 +30,7 @@ class SiderMenu extends React.Component {
 
                         <SubMenu key="sub1" icon={<DesktopOutlined />} title="My forms">
                             <Menu.Item key="2"> <Link to="/">Bill</Link></Menu.Item>
-                            <Menu.Item key="3">Bill</Menu.Item>
+                            <Menu.Item key="3"><Link to="/login-join">login</Link></Menu.Item>
                             <Menu.Item key="4">Alex</Menu.Item>
                         </SubMenu>
 
