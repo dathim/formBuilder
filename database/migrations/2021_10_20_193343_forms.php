@@ -16,6 +16,7 @@ class Forms extends Migration
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('user_id');
             $table->boolean('enable');
             $table->longText('code');
             $table->timestamps();

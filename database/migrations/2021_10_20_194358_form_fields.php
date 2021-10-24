@@ -13,7 +13,7 @@ class FormFields extends Migration
      */
     public function up()
     {
-        Schema::create('form_field', function (Blueprint $table) {
+        Schema::create('form_fields', function (Blueprint $table) {
             $table->id();
             $table->integer('field_id');
             $table->string('name');
