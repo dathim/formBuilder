@@ -14,5 +14,4 @@ let reducers = combineReducers({
 })
 
 let store = createStore(reducers,applyMiddleware(thunkMiddelWare))
-console.log('123')
 export default store

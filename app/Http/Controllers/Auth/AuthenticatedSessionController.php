@@ -17,7 +17,8 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        return view('auth.login');
+        return response()->json(['login' => 'fail' ]);
+        //return view('auth.login');
     }
 
     /**
@@ -29,10 +30,8 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request)
     {
         $request->authenticate();
-
         $request->session()->regenerate();
-
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return response()->json(['login' => 'success' ]);
     }
 
     /**

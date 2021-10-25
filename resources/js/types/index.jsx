@@ -1,0 +1,3 @@
+export const SET_CSRF = 'SET_CSRF'
+export const LOGIN_UPDATE = 'LOGIN_UPDATE'
+export const ERROR_NOT_CONECTED = 'ERROR_NOT_CONECTED'

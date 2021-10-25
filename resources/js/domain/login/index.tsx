@@ -1,10 +1,20 @@
 import React from 'react';
+import { useSelector,useDispatch } from 'react-redux'
 import { Layout, Form, Input, Button, Checkbox, Breadcrumb } from 'antd';
 const { Header, Content, Footer } = Layout;
+import { loginThunk } from '../../actions';
+import type { AllState } from '../../components/types'
 
 const Login = () => {
+    const userToken = useSelector((state: AllState) => state.profile.apiCsrf)
+    const dispatch = useDispatch()
+
     const onFinish = (values: any) => {
         console.log('Success:', values);
+        dispatch(loginThunk(values))   
+
+        // fFRKI0MyY5@gmail.com
+        // password
     };
 
     const onFinishFailed = (errorInfo: any) => {
@@ -32,8 +42,8 @@ const Login = () => {
                     >
                         <Form.Item
                             label="Username"
-                            name="username"
-                            rules={[{ required: true, message: 'Please input your username!' }]}
+                            name="email"
+                            rules={[{ required: true, message: 'Please input your email!' }]}
                         >
                             <Input />
                         </Form.Item>

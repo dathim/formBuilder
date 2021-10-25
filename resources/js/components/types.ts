@@ -1,11 +1,13 @@
 export type profileStore = {
     appIsEnable: boolean,
+    apiCsrf:string,
     userName:string,
     userToken:string,
     userTokenLiveTime:number,
     userTokenLiveStart:string,
     userRefreshToken:string
-    userFieldsEnable:boolean
+    userFieldsEnable:boolean,
+    errorConnect:boolean,
  }
 
 
